@@ -107,7 +107,7 @@ class Kohana_Database_Query_Builder_Join extends Database_Query_Builder {
 			// Quote and concat the columns
 			$sql .= ' USING ('.implode(', ', array_map(array($db, 'quote_column'), $this->_using)).')';
 		}
-		else
+		elseif ( ! empty($this->_on))
 		{
 			$conditions = array();
 			foreach ($this->_on as $condition)
