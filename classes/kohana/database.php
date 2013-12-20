@@ -635,7 +635,7 @@ abstract class Kohana_Database {
 		if (isset($alias))
 		{
 			// Attach table prefix to alias
-			$table .= ' AS '.$this->_identifier.$this->table_prefix().$alias.$this->_identifier;
+			$table .= ' '.$this->_identifier.$this->table_prefix().$alias.$this->_identifier;
 		}
 
 		return $table;
